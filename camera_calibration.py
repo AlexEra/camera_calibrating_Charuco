@@ -34,7 +34,7 @@ for calImg in calibImages:
             allCharucoCorners.append(res2[1])
             allCharucoIds.append(res2[2])
         cv2.aruco.drawDetectedMarkers(calImg, res[0], res[1])
-    img = cv2.resize(calImg, None, fx = 0.5, fy = 0.5)
+    img = cv2.resize(calImg, None, fx=0.5, fy=0.5)
     cv2.imshow('calibration image', img)
     cv2.waitKey(0)
 cv2.destroyAllWindows()
@@ -54,5 +54,5 @@ tmp = [cameraMatrix, distCoeffs, rvecs, tvecs, stdDeviationsInstrinsics,
        stdDeviationsExtrinsics]
 
 # Save the parameters
-with open('cam_param.pkl', mode = 'wb') as f:
-    pickle.dump(tmp, f, protocol = 2)
+with open('cam_param.pkl', mode='wb') as f:
+    pickle.dump(tmp, f, protocol=2)
