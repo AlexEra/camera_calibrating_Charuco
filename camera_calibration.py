@@ -47,11 +47,9 @@ try:
 except:
     print("can not calibrate ...")
 
-retval, cameraMatrix, distCoeffs, rvecs, tvecs, stdDeviationsInstrinsics, 
-stdDeviationsExtrinsics, perViewErrors = cal
+retval, cameraMatrix, distCoeffs, rvecs, tvecs, stdDeviationsInstrinsics, stdDeviationsExtrinsics, perViewErrors = cal
 
-tmp = [cameraMatrix, distCoeffs, rvecs, tvecs, stdDeviationsInstrinsics,
-       stdDeviationsExtrinsics]
+tmp = [cameraMatrix, distCoeffs, rvecs, tvecs, stdDeviationsInstrinsics, stdDeviationsExtrinsics]
 
 # Save the parameters
 with open('cam_param.pkl', mode='wb') as f:
